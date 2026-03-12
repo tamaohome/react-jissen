@@ -1,0 +1,49 @@
+@reference "@/tailwind.css";
+
+.container {
+  @apply mt-8 min-w-80 p-6 max-w-sm bg-white rounded-lg shadow-2xl mx-auto;
+}
+
+.userInfo {
+  @apply mb-6;
+}
+
+.userLabel {
+  @apply text-sm font-semibold text-gray-600;
+}
+
+.userName {
+  @apply text-2xl font-bold text-gray-900 mt-1;
+}
+
+.changeButton {
+  @apply bg-slate-500 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg text-sm transition;
+}
+
+.modalTitle {
+  @apply text-lg font-semibold text-gray-900 mb-4;
+}
+
+.inputGroup {
+  @apply gap-3 mb-6 flex items-center;
+}
+
+.inputLabel {
+  @apply text-sm font-medium text-gray-700 whitespace-nowrap;
+}
+
+.input {
+  @apply border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-500 flex-1 border focus:ring-2 focus:outline-none;
+}
+
+.buttonGroup {
+  @apply gap-3 flex;
+}
+
+.completeButton {
+  @apply bg-slate-500 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg flex-1 transition;
+}
+
+.cancelButton {
+  @apply bg-gray-300 hover:bg-gray-400 text-gray-900 font-semibold py-2 px-4 rounded-lg flex-1 transition;
+}
