@@ -5,7 +5,7 @@ const meta = {
   title: "UI/Button",
   component: Button,
   parameters: {
-    layout: "centered",
+    layout: "padded",
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Button>;

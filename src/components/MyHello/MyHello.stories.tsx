@@ -5,7 +5,7 @@ const meta = {
   title: "Components/MyHello",
   component: MyHello,
   parameters: {
-    layout: "centered",
+    layout: "padded",
   },
 } satisfies Meta<typeof MyHello>;
 

@@ -6,16 +6,8 @@ const meta: Meta<typeof Pagination> = {
   title: "UI/Pagination",
   component: Pagination,
   parameters: {
-    layout: "fullscreen",
+    layout: "padded",
   },
-  decorators: [
-    (Story) => (
-      // 周囲に余白を追加
-      <div className="p-8">
-        <Story />
-      </div>
-    ),
-  ],
   tags: ["autodocs"],
 };
 

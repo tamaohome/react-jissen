@@ -7,7 +7,7 @@ const meta = {
   title: "UI/Modal",
   component: Modal,
   parameters: {
-    layout: "centered",
+    layout: "padded",
   },
 } satisfies Meta<typeof Modal>;
 

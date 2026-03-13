@@ -12,7 +12,7 @@ type Story = StoryObj<typeof ContentCard>;
 
 export const Default: Story = {
   parameters: {
-    layout: "centered",
+    layout: "padded",
   },
   render: () => (
     <div className="w-120">
