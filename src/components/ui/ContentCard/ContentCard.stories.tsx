@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ContentCard } from "./ContentCard";
 
 const meta: Meta<typeof ContentCard> = {
-  title: "Components/UI/ContentCard",
+  title: "UI/ContentCard",
   component: ContentCard,
 };
 

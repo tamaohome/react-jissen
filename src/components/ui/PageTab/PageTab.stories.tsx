@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { PageTab } from "./PageTab";
 
 const meta = {
-  title: "Components/UI/PageTab",
+  title: "UI/PageTab",
   component: PageTab,
   parameters: {
     layout: "centered",

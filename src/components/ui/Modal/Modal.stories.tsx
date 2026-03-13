@@ -4,7 +4,7 @@ import { Modal } from "./Modal";
 import { Button } from "@/components/ui/Button";
 
 const meta = {
-  title: "Components/UI/Modal",
+  title: "UI/Modal",
   component: Modal,
   parameters: {
     layout: "centered",
