@@ -1,5 +1,7 @@
 import { useMemo } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { RxDotsHorizontal } from "react-icons/rx";
+import clsx from "clsx";
 
 interface PaginationProps {
   currentPage: number;
@@ -63,7 +65,7 @@ export const Pagination = ({
   }
 
   return (
-    <nav className="flex items-stretch justify-center gap-2">
+    <nav className="flex items-stretch gap-2">
       {/* 前へボタン */}
       <button
         onClick={() => onPageChange(currentPage - 1)}
@@ -75,20 +77,23 @@ export const Pagination = ({
       </button>
 
       {/* ページ番号 */}
-      <div className="flex items-stretch gap-1">
+      <div className="flex flex-1 items-center justify-center gap-2">
         {pageNumbers.map((page, index) => (
           <div key={index}>
             {page === "..." ? (
-              <span className="px-3 py-2 text-sm text-slate-700">...</span>
+              <span className="px-1 text-slate-700">
+                <RxDotsHorizontal size={16} className="inline-flex" />
+              </span>
             ) : (
               <button
                 onClick={() => onPageChange(page as number)}
                 aria-label={`ページ ${page} へ移動`}
-                className={`flex items-center justify-center rounded-md border px-3 py-2 text-sm font-medium transition-all ${
+                className={clsx(
+                  "flex items-center justify-center rounded-md border px-3 py-2 text-sm font-medium transition-all",
                   currentPage === page
                     ? "border-blue-500 bg-blue-50 text-blue-700"
-                    : "border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
-                }`}
+                    : "border-slate-300 bg-white text-slate-700 hover:bg-slate-50",
+                )}
               >
                 {page}
               </button>
