@@ -25,12 +25,7 @@ const ModalWrapper = ({
 
   return (
     <>
-      <button
-        onClick={() => setIsOpen(true)}
-        className="rounded-lg bg-slate-500 px-4 py-2 font-semibold text-white hover:bg-slate-600"
-      >
-        モーダルを開く
-      </button>
+      <Button onClick={() => setIsOpen(true)}>モーダルを開く</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         {children}
       </Modal>
