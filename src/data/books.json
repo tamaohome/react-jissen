@@ -1,0 +1,242 @@
+[
+  {
+    "id": 10001,
+    "isbn": "978-4-8156-3594-7",
+    "title": "改訂新版 これからはじめるReact実践入門",
+    "price": 4455,
+    "authors": ["山田 祥寛"],
+    "category": "React"
+  },
+  {
+    "id": 10002,
+    "isbn": "978-4-297-12783-1",
+    "title": "プロを目指す人のためのTypeScript入門",
+    "price": 3278,
+    "authors": ["鈴木 僚太"],
+    "category": "TypeScript"
+  },
+  {
+    "id": 10003,
+    "isbn": "978-4-87311-970-0",
+    "title": "入門 Python 3 第2版",
+    "price": 3740,
+    "authors": ["Bill Lubanovic", "斎藤 康毅"],
+    "category": "Python"
+  },
+  {
+    "id": 10004,
+    "isbn": "978-4-297-13366-5",
+    "title": "AWSの基本・仕組み・重要用語が全部わかる教科書",
+    "price": 2618,
+    "authors": ["川上 明久"],
+    "category": "Cloud"
+  },
+  {
+    "id": 10005,
+    "isbn": "978-4-7981-7977-3",
+    "title": "独習GitHub",
+    "price": 3300,
+    "authors": ["大津 真"],
+    "category": "Tools"
+  },
+  {
+    "id": 10006,
+    "isbn": "978-4-8399-7945-4",
+    "title": "SQL 第2版 ゼロからはじめる書き方入門",
+    "price": 2420,
+    "authors": ["ミック"],
+    "category": "Database"
+  },
+  {
+    "id": 10007,
+    "isbn": "978-4-297-12595-0",
+    "title": "マスタリングTCP/IP 入門編",
+    "price": 2420,
+    "authors": ["井上 直也", "村山 公保"],
+    "category": "Network"
+  },
+  {
+    "id": 10008,
+    "isbn": "978-4-87311-907-6",
+    "title": "リーダブルコード",
+    "price": 2640,
+    "authors": ["Dustin Boswell", "Trevor Foucher"],
+    "category": "Engineering"
+  },
+  {
+    "id": 10009,
+    "isbn": "978-4-8156-1336-5",
+    "title": "1冊ですべて身につくHTML & CSSとWebデザイン入門講座",
+    "price": 2486,
+    "authors": ["Mana"],
+    "category": "Design"
+  },
+  {
+    "id": 10010,
+    "isbn": "978-4-7981-7613-0",
+    "title": "独習C# 第5版",
+    "price": 3960,
+    "authors": ["山田 祥寛"],
+    "category": "C#"
+  },
+  {
+    "id": 10011,
+    "isbn": "978-4-87311-949-6",
+    "title": "実用 Git 第3版",
+    "price": 3960,
+    "authors": ["Jon Loeliger", "Matthew McCullough"],
+    "category": "Tools"
+  },
+  {
+    "id": 10012,
+    "isbn": "978-4-297-13116-6",
+    "title": "Docker/Kubernetesの実践を出発点に学ぶ コンテナ開発の教科書",
+    "price": 3520,
+    "authors": ["佐々木 健太郎"],
+    "category": "Infrastructure"
+  },
+  {
+    "id": 10013,
+    "isbn": "978-4-8399-6660-7",
+    "title": "Web API The Good Parts",
+    "price": 2420,
+    "authors": ["水野 貴明"],
+    "category": "Web"
+  },
+  {
+    "id": 10014,
+    "isbn": "978-4-7973-9889-2",
+    "title": "達人プログラマー 第2版",
+    "price": 3520,
+    "authors": ["Andrew Hunt", "David Thomas"],
+    "category": "Engineering"
+  },
+  {
+    "id": 10015,
+    "isbn": "978-4-87311-565-8",
+    "title": "JavaScript 第7版",
+    "price": 4400,
+    "authors": ["David Flanagan"],
+    "category": "JavaScript"
+  },
+  {
+    "id": 10016,
+    "isbn": "978-4-8156-1344-0",
+    "title": "おうちで学べるサーバのきほん",
+    "price": 2178,
+    "authors": ["及川 信善"],
+    "category": "Infrastructure"
+  },
+  {
+    "id": 10017,
+    "isbn": "978-4-297-14050-2",
+    "title": "良いコード／悪いコードで学ぶ設計入門",
+    "price": 3278,
+    "authors": ["仙塲 大也"],
+    "category": "Engineering"
+  },
+  {
+    "id": 10018,
+    "isbn": "978-4-87311-981-6",
+    "title": "単体テストの考え方/使い方",
+    "price": 4180,
+    "authors": ["Vladimir Khorikov"],
+    "category": "Testing"
+  },
+  {
+    "id": 10019,
+    "isbn": "978-4-297-12437-3",
+    "title": "徹底比較！モダンなWeb開発の正解",
+    "price": 3520,
+    "authors": ["小林 慎治"],
+    "category": "Web"
+  },
+  {
+    "id": 10020,
+    "isbn": "978-4-7981-7864-6",
+    "title": "プロフェッショナルWebプログラミング Go",
+    "price": 3740,
+    "authors": ["佐藤 昭夫"],
+    "category": "Go"
+  },
+  {
+    "id": 10021,
+    "isbn": "978-4-8156-1936-7",
+    "title": "Rust入門 実践プログラミング",
+    "price": 3960,
+    "authors": ["苦労 龍馬"],
+    "category": "Rust"
+  },
+  {
+    "id": 10022,
+    "isbn": "978-4-297-12154-9",
+    "title": "ゼロからわかるPostgreSQL入門",
+    "price": 3168,
+    "authors": ["藤原 聖"],
+    "category": "Database"
+  },
+  {
+    "id": 10023,
+    "isbn": "978-4-87311-945-8",
+    "title": "マイクロサービスアーキテクチャ 第2版",
+    "price": 4400,
+    "authors": ["Sam Newman"],
+    "category": "Architecture"
+  },
+  {
+    "id": 10024,
+    "isbn": "978-4-7973-9999-8",
+    "title": "UIデザインの教科書",
+    "price": 2860,
+    "authors": ["原田 秀昭"],
+    "category": "Design"
+  },
+  {
+    "id": 10025,
+    "isbn": "978-4-297-13354-2",
+    "title": "ChatGPT/LangChainによるチャットシステム構築入門",
+    "price": 3520,
+    "authors": ["吉田 真吾"],
+    "category": "AI"
+  },
+  {
+    "id": 10026,
+    "isbn": "978-4-8399-8000-0",
+    "title": "モダンJavaScriptの基本から始めるReact入門",
+    "price": 2860,
+    "authors": ["岡田 拓土"],
+    "category": "React"
+  },
+  {
+    "id": 10027,
+    "isbn": "978-4-04-606211-6",
+    "title": "FastAPIによるWeb API開発近代化入門",
+    "price": 3520,
+    "authors": ["島田 浩二"],
+    "category": "FastAPI"
+  },
+  {
+    "id": 10028,
+    "isbn": "978-4-297-13726-7",
+    "title": "Python実践入門 FastAPIで作るWebアプリケーション",
+    "price": 3740,
+    "authors": ["露木 誠"],
+    "category": "FastAPI"
+  },
+  {
+    "id": 10029,
+    "isbn": "978-4-87311-989-2",
+    "title": "実践 FastAPI",
+    "price": 3960,
+    "authors": ["Bill Lubanovic"],
+    "category": "FastAPI"
+  },
+  {
+    "id": 10030,
+    "isbn": "978-4-7981-8123-3",
+    "title": "PythonエンジニアのためのFastAPI入門",
+    "price": 3300,
+    "authors": ["中井 悦司"],
+    "category": "FastAPI"
+  }
+]
