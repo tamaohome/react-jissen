@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Modal } from "@/components/ui/Modal";
 import styles from "./MyHello.module.css";
+import { PageTab } from "@/components/ui/PageTab";
+import { ContentCard } from "@/components/ui/ContentCard";
 
 interface MyHelloProps {
   name?: string;
@@ -27,22 +29,26 @@ export const MyHello = ({ name: initialName = "" }: MyHelloProps) => {
   };
 
   return (
-    <>
-      <div className={styles.container}>
-        <dl className={styles.userInfo}>
-          <dt className={styles.userLabel}>ユーザ名</dt>
-          <dd className={styles.userName}>{name}</dd>
-        </dl>
-        <button
-          onClick={() => {
-            setInputValue(name);
-            setIsOpen(true);
-          }}
-          className={styles.changeButton}
-        >
-          ユーザ名を変更
-        </button>
-      </div>
+    <section>
+      <PageTab title="プロフィール情報" />
+      <ContentCard>
+        <div>
+          <dl className={styles.userInfo}>
+            <dt className={styles.userLabel}>ユーザ名</dt>
+            <dd className={styles.userName}>{name}</dd>
+          </dl>
+          <button
+            onClick={() => {
+              setInputValue(name);
+              setIsOpen(true);
+            }}
+            className={styles.changeButton}
+          >
+            ユーザ名を変更
+          </button>
+        </div>
+      </ContentCard>
+
       <Modal isOpen={isOpen} onClose={handleCancel}>
         <h3 className={styles.modalTitle}>プロフィールを変更</h3>
         <div className={styles.inputGroup}>
@@ -57,7 +63,7 @@ export const MyHello = ({ name: initialName = "" }: MyHelloProps) => {
             className={styles.input}
           />
         </div>
-        <div className={styles.buttonGroup}>
+        <div className="flex gap-3">
           <button onClick={handleComplete} className={styles.completeButton}>
             設定を完了
           </button>
@@ -66,6 +72,6 @@ export const MyHello = ({ name: initialName = "" }: MyHelloProps) => {
           </button>
         </div>
       </Modal>
-    </>
+    </section>
   );
 };
