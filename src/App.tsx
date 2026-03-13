@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { PageTab } from "@/components/ui/PageTab";
 import { ContentCard } from "@/components/ui/ContentCard";
+import { Button } from "@/components/ui/Button";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,12 +23,9 @@ function App() {
         </div>
         <h1 className="text-center text-5xl font-bold">Vite + React</h1>
         <div className="flex flex-col items-center gap-4 p-8">
-          <button
-            onClick={() => setCount((count) => count + 1)}
-            className="cursor-pointer bg-slate-500 px-5 py-2.5 font-medium text-white shadow-md transition-all hover:bg-slate-800 active:scale-95"
-          >
+          <Button onClick={() => setCount((count) => count + 1)}>
             count is {count}
-          </button>
+          </Button>
           <p>
             Edit <code>src/App.tsx</code> and save to test HMR
           </p>

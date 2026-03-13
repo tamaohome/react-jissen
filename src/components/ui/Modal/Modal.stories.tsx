@@ -1,6 +1,7 @@
 import type { Meta } from "@storybook/react-vite";
 import { useState } from "react";
 import { Modal } from "./Modal";
+import { Button } from "@/components/ui/Button";
 
 const meta = {
   title: "Components/UI/Modal",
@@ -26,7 +27,7 @@ const ModalWrapper = ({
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="bg-slate-500 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg"
+        className="rounded-lg bg-slate-500 px-4 py-2 font-semibold text-white hover:bg-slate-600"
       >
         モーダルを開く
       </button>
@@ -40,15 +41,13 @@ const ModalWrapper = ({
 export const Default = {
   render: () => (
     <ModalWrapper>
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">
+      <h3 className="mb-4 text-lg font-semibold text-gray-900">
         モーダルのタイトル
       </h3>
-      <p className="text-gray-700 mb-6">
+      <p className="mb-6 text-gray-700">
         これはモーダルコンポーネントの基本的な使用例です。
       </p>
-      <button className="bg-slate-500 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg">
-        アクション実行
-      </button>
+      <Button>アクション実行</Button>
     </ModalWrapper>
   ),
 };
@@ -56,38 +55,36 @@ export const Default = {
 export const WithForm = {
   render: () => (
     <ModalWrapper>
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">
+      <h3 className="mb-4 text-lg font-semibold text-gray-900">
         プロフィール変更
       </h3>
-      <div className="gap-3 mb-6 flex flex-col">
+      <div className="mb-6 flex flex-col gap-3">
         <div className="flex items-center">
-          <label className="text-sm font-medium text-gray-700 w-24">
+          <label className="w-24 text-sm font-medium text-gray-700">
             名前：
           </label>
           <input
             type="text"
             placeholder="名前を入力"
-            className="border-gray-300 rounded-lg px-3 py-2 focus:ring-slate-500 flex-1 border focus:ring-2 focus:outline-none"
+            className="flex-1 rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-slate-500 focus:outline-none"
           />
         </div>
         <div className="flex items-center">
-          <label className="text-sm font-medium text-gray-700 w-24">
+          <label className="w-24 text-sm font-medium text-gray-700">
             メール：
           </label>
           <input
             type="email"
             placeholder="メールを入力"
-            className="border-gray-300 rounded-lg px-3 py-2 focus:ring-slate-500 flex-1 border focus:ring-2 focus:outline-none"
+            className="flex-1 rounded-lg border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-slate-500 focus:outline-none"
           />
         </div>
       </div>
-      <div className="gap-3 flex">
-        <button className="bg-slate-500 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg flex-1">
-          保存
-        </button>
-        <button className="bg-gray-300 hover:bg-gray-400 text-gray-900 font-semibold py-2 px-4 rounded-lg flex-1">
+      <div className="flex gap-3">
+        <Button>保存</Button>
+        <Button className="bg-slate-400 data-hover:bg-slate-500">
           キャンセル
-        </button>
+        </Button>
       </div>
     </ModalWrapper>
   ),
@@ -96,17 +93,15 @@ export const WithForm = {
 export const WithConfirmation = {
   render: () => (
     <ModalWrapper>
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">実行確認</h3>
-      <p className="text-gray-700 mb-6">
+      <h3 className="mb-4 text-lg font-semibold text-gray-900">実行確認</h3>
+      <p className="mb-6 text-gray-700">
         この操作は取り消せません。本当に実行しますか？
       </p>
-      <div className="gap-3 flex">
-        <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg flex-1">
-          削除する
-        </button>
-        <button className="bg-gray-300 hover:bg-gray-400 text-gray-900 font-semibold py-2 px-4 rounded-lg flex-1">
+      <div className="flex gap-3">
+        <Button className="bg-red-500 data-hover:bg-red-600">削除する</Button>
+        <Button className="bg-slate-400 data-hover:bg-slate-500">
           キャンセル
-        </button>
+        </Button>
       </div>
     </ModalWrapper>
   ),
@@ -115,15 +110,13 @@ export const WithConfirmation = {
 export const InitiallyOpen = {
   render: () => (
     <ModalWrapper isOpen={true}>
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">
+      <h3 className="mb-4 text-lg font-semibold text-gray-900">
         初期状態で開いているモーダル
       </h3>
-      <p className="text-gray-700 mb-6">
+      <p className="mb-6 text-gray-700">
         このモーダルはデフォルトで開いた状態です。
       </p>
-      <button className="bg-slate-500 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg">
-        OK
-      </button>
+      <Button>OK</Button>
     </ModalWrapper>
   ),
 };

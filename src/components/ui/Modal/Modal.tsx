@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/Button";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { type ReactNode } from "react";
 import { MdClose } from "react-icons/md";
@@ -16,19 +17,15 @@ export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
       transition
       className="relative z-50 focus:outline-none"
     >
-      <div className="inset-0 bg-black/30 ease-out fixed duration-300 data-closed:opacity-0" />
-      <div className="inset-0 p-4 fixed flex items-center justify-center">
+      <div className="fixed inset-0 bg-black/30 duration-300 ease-out data-closed:opacity-0" />
+      <div className="fixed inset-0 flex items-center justify-center p-4">
         <DialogPanel
           transition
-          className="max-w-md rounded-xl bg-white p-6 shadow-xl ease-out relative w-full duration-300 data-closed:scale-95 data-closed:opacity-0"
+          className="relative w-full max-w-md rounded-xl bg-white p-6 shadow-xl duration-300 ease-out data-closed:scale-95 data-closed:opacity-0"
         >
-          <button
-            onClick={onClose}
-            className="top-4 right-4 text-gray-400 hover:text-gray-600 absolute transition-colors"
-            aria-label="Close modal"
-          >
-            <MdClose className="w-6 h-6" />
-          </button>
+          <Button onClick={onClose} aria-label="Close modal">
+            <MdClose className="h-6 w-6" />
+          </Button>
           {children}
         </DialogPanel>
       </div>

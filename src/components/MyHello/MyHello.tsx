@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Modal } from "@/components/ui/Modal";
-import styles from "./MyHello.module.css";
 import { PageTab } from "@/components/ui/PageTab";
 import { ContentCard } from "@/components/ui/ContentCard";
+import { Button } from "@/components/ui/Button";
 
 interface MyHelloProps {
   name?: string;
@@ -33,26 +33,30 @@ export const MyHello = ({ name: initialName = "" }: MyHelloProps) => {
       <PageTab title="プロフィール情報" />
       <ContentCard>
         <div>
-          <dl className={styles.userInfo}>
-            <dt className={styles.userLabel}>ユーザ名</dt>
-            <dd className={styles.userName}>{name}</dd>
+          <dl className="mb-6">
+            <dt className="text-sm font-semibold text-gray-600">ユーザ名</dt>
+            <dd className="mt-1 text-2xl font-bold text-gray-900">{name}</dd>
           </dl>
-          <button
+          <Button
             onClick={() => {
               setInputValue(name);
               setIsOpen(true);
             }}
-            className={styles.changeButton}
           >
             ユーザ名を変更
-          </button>
+          </Button>
         </div>
       </ContentCard>
 
       <Modal isOpen={isOpen} onClose={handleCancel}>
-        <h3 className={styles.modalTitle}>プロフィールを変更</h3>
-        <div className={styles.inputGroup}>
-          <label htmlFor="username" className={styles.inputLabel}>
+        <h3 className="mb-4 text-lg font-semibold text-gray-900">
+          プロフィールを変更
+        </h3>
+        <div className="mb-6 flex items-center gap-3">
+          <label
+            htmlFor="username"
+            className="text-sm font-medium whitespace-nowrap text-gray-700"
+          >
             ユーザ名：
           </label>
           <input
@@ -60,16 +64,17 @@ export const MyHello = ({ name: initialName = "" }: MyHelloProps) => {
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            className={styles.input}
+            className="flex-1 border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
-        <div className="flex gap-3">
-          <button onClick={handleComplete} className={styles.completeButton}>
-            設定を完了
-          </button>
-          <button onClick={handleCancel} className={styles.cancelButton}>
+        <div className="flex justify-center gap-3">
+          <Button onClick={handleComplete}>設定を完了</Button>
+          <Button
+            onClick={handleCancel}
+            className="bg-slate-400 data-hover:bg-slate-500"
+          >
             キャンセル
-          </button>
+          </Button>
         </div>
       </Modal>
     </section>
