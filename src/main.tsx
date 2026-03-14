@@ -7,10 +7,16 @@ import { SandBox } from "@/components/SandBox";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <main className="m-8 flex w-full max-w-160 flex-col gap-8">
-      <App />
-      <MyHello />
-      <SandBox />
-    </main>
+    <div className="relative min-h-screen">
+      {/* 背景レイヤー */}
+      <div className="bfixed fixed inset-0 -z-10 bg-linear-to-tl from-[#4c1d95]/65 via-[#1e40af]/65 to-[#646cff]/65" />
+
+      {/* メインコンテンツ */}
+      <main className="m-8 flex w-full max-w-160 flex-col gap-8">
+        <App />
+        <MyHello />
+        <SandBox />
+      </main>
+    </div>
   </StrictMode>,
 );
