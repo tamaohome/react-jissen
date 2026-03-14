@@ -20,7 +20,7 @@ export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
       <div className="fixed inset-0 flex items-center justify-center p-4">
         <DialogPanel
           transition
-          className="relative w-full max-w-md rounded-xl bg-white p-6 shadow-xl duration-300 ease-out data-closed:scale-95 data-closed:opacity-0"
+          className="relative w-full max-w-md bg-white p-6 shadow-xl duration-300 ease-out data-closed:scale-95 data-closed:opacity-0"
         >
           <button
             onClick={onClose}
