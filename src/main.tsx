@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "@/index.css";
 import App from "@/App.tsx";
 import { MyHello } from "@/components/MyHello";
-import { SandBox } from "@/components/SandBox";
+import { Bookshelf } from "@/components/Bookshelf";
 import { Header } from "@/components/ui/Header";
 
 createRoot(document.getElementById("root")!).render(
@@ -17,7 +17,7 @@ createRoot(document.getElementById("root")!).render(
 
       {/* メインコンテンツ */}
       <main className="m-8 flex w-full max-w-160 flex-col gap-8">
-        <SandBox />
+        <Bookshelf />
         <MyHello />
         <App />
       </main>

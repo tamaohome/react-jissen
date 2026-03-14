@@ -36,16 +36,15 @@ export const BookList = ({ items }: BookListProps) => (
   </dl>
 );
 
-export const SandBox = () => {
+export const Bookshelf = () => {
   const { currentPage, totalPages, currentItems, totalItems, goToPage } =
     usePagination(books, 5);
 
   return (
     <section>
-      <PageTab title="サンドボックス" />
+      <PageTab title="書籍一覧" />
       <ContentCard>
         <div className="mb-6 flex items-center justify-between">
-          <h3 className="text-xl font-semibold">書籍一覧</h3>
           <span className="text-sm text-slate-600">
             全 {totalItems} 件 / {currentPage} ページ目
           </span>
