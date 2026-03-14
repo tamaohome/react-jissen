@@ -13,9 +13,9 @@ createRoot(document.getElementById("root")!).render(
 
       {/* メインコンテンツ */}
       <main className="m-8 flex w-full max-w-160 flex-col gap-8">
-        <App />
-        <MyHello />
         <SandBox />
+        <MyHello />
+        <App />
       </main>
     </div>
   </StrictMode>,
