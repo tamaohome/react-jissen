@@ -14,14 +14,14 @@ interface BookListProps {
   items: typeof books;
 }
 
-export const BookItem = ({ title, price }: BookItemProps) => (
+const BookItem = ({ title, price }: BookItemProps) => (
   <div className="flex border-b border-dashed border-slate-400">
     <dt className="flex-1">{title}</dt>
     <dd className="text-right">{price} 円</dd>
   </div>
 );
 
-export const BookList = ({ items }: BookListProps) => (
+const BookList = ({ items }: BookListProps) => (
   <dl className="mb-8 space-y-4">
     {/* 配列による繰り返し */}
     {items.map((book) => (
