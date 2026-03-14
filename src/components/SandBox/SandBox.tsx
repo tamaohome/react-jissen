@@ -4,6 +4,38 @@ import { Pagination } from "@/components/ui/Pagination";
 import { usePagination } from "@/hooks/usePagination";
 import books from "@/data/books.json";
 
+interface BookItemProps {
+  id: number;
+  title: string;
+  price: number;
+}
+
+interface BookListProps {
+  items: typeof books;
+}
+
+export const BookItem = ({ title, price }: BookItemProps) => (
+  <div className="flex border-b border-dashed border-slate-400">
+    <dt className="flex-1">{title}</dt>
+    <dd className="text-right">{price} 円</dd>
+  </div>
+);
+
+export const BookList = ({ items }: BookListProps) => (
+  <dl className="mb-8 space-y-4">
+    {/* 配列による繰り返し */}
+    {items.map((book) => (
+      // 配列を展開する場合は key の指定が必要
+      <BookItem
+        key={book.id}
+        id={book.id}
+        title={book.title}
+        price={book.price}
+      />
+    ))}
+  </dl>
+);
+
 export const SandBox = () => {
   const { currentPage, totalPages, currentItems, totalItems, goToPage } =
     usePagination(books, 5);
@@ -19,19 +51,7 @@ export const SandBox = () => {
           </span>
         </div>
 
-        <dl className="mb-8 space-y-4">
-          {/* 配列による繰り返し */}
-          {currentItems.map((book) => (
-            // 配列を展開する場合は key の指定が必要
-            <div
-              key={book.id}
-              className="flex border-b border-dashed border-slate-400"
-            >
-              <dt className="flex-1">{book.title}</dt>
-              <dd className="text-right">{book.price} 円</dd>
-            </div>
-          ))}
-        </dl>
+        <BookList items={currentItems} />
 
         {/* ページネーション */}
         <Pagination
