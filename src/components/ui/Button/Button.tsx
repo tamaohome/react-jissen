@@ -23,13 +23,13 @@ type ButtonVariants = {
 export type ButtonProps = React.ComponentProps<typeof HeadlessButton> &
   ButtonVariants;
 
-export const Button = ({
+export function Button({
   children,
   className,
   disabled,
   variant = "normal",
   ...props
-}: ButtonProps) => {
+}: ButtonProps) {
   return (
     <HeadlessButton
       disabled={disabled}
@@ -44,4 +44,4 @@ export const Button = ({
       {children}
     </HeadlessButton>
   );
-};
+}

@@ -8,7 +8,7 @@ interface MyHelloProps {
   name?: string;
 }
 
-export const MyHello = ({ name: initialName = "" }: MyHelloProps) => {
+export function MyHello({ name: initialName = "" }: MyHelloProps) {
   // 表示する名前の状態
   const [name, setName] = useState(initialName);
 
@@ -17,6 +17,11 @@ export const MyHello = ({ name: initialName = "" }: MyHelloProps) => {
 
   // 入力値を保持
   const [inputValue, setInputValue] = useState(name);
+
+  const handleEditClick = () => {
+    setInputValue(name);
+    setIsOpen(true);
+  };
 
   const handleComplete = () => {
     setName(inputValue);
@@ -29,24 +34,19 @@ export const MyHello = ({ name: initialName = "" }: MyHelloProps) => {
   };
 
   return (
-    <section>
-      <PageTab title="プロフィール情報" />
-      <ContentCard>
-        <div>
-          <dl className="mb-6">
-            <dt className="text-sm font-semibold text-gray-600">ユーザ名</dt>
-            <dd className="mt-1 text-2xl font-bold text-gray-900">{name}</dd>
-          </dl>
-          <Button
-            onClick={() => {
-              setInputValue(name);
-              setIsOpen(true);
-            }}
-          >
-            ユーザ名を変更
-          </Button>
-        </div>
-      </ContentCard>
+    <>
+      <section>
+        <PageTab title="プロフィール情報" />
+        <ContentCard>
+          <div>
+            <dl className="mb-6">
+              <dt className="text-sm font-semibold text-gray-600">ユーザ名</dt>
+              <dd className="mt-1 text-2xl font-bold text-gray-900">{name}</dd>
+            </dl>
+            <Button onClick={handleEditClick}>ユーザ名を変更</Button>
+          </div>
+        </ContentCard>
+      </section>
 
       <Modal isOpen={isOpen} onClose={handleCancel}>
         <h3 className="mb-4 text-lg font-semibold text-gray-900">
@@ -77,6 +77,6 @@ export const MyHello = ({ name: initialName = "" }: MyHelloProps) => {
           </Button>
         </div>
       </Modal>
-    </section>
+    </>
   );
-};
+}

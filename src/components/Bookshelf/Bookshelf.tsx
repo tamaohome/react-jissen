@@ -36,7 +36,7 @@ const BookList = ({ items }: BookListProps) => (
   </dl>
 );
 
-export const Bookshelf = () => {
+export function Bookshelf() {
   const { currentPage, totalPages, currentItems, totalItems, goToPage } =
     usePagination(books, 5);
 
@@ -61,4 +61,4 @@ export const Bookshelf = () => {
       </ContentCard>
     </section>
   );
-};
+}

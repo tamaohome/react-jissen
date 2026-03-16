@@ -1,7 +1,6 @@
-import type React from "react";
 import { SiReact } from "react-icons/si";
 
-export const Header: React.FC = () => {
+export function Header() {
   return (
     <>
       <div role="presentation" className="h-12"></div>
@@ -15,4 +14,4 @@ export const Header: React.FC = () => {
       </header>
     </>
   );
-};
+}

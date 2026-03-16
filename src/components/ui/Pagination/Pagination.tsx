@@ -10,12 +10,12 @@ interface PaginationProps {
   siblingCount?: number;
 }
 
-export const Pagination = ({
+export function Pagination({
   currentPage,
   totalPages,
   onPageChange,
   siblingCount = 1,
-}: PaginationProps) => {
+}: PaginationProps) {
   const pageNumbers = useMemo(() => {
     const pages: (number | string)[] = [];
     const leftSiblingIndex = Math.max(currentPage - siblingCount, 1);
@@ -113,4 +113,4 @@ export const Pagination = ({
       </button>
     </nav>
   );
-};
+}

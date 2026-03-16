@@ -8,7 +8,7 @@ export type ModalProps = {
   children: ReactNode;
 };
 
-export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
+export function Modal({ isOpen, onClose, children }: ModalProps) {
   return (
     <Dialog
       open={isOpen}
@@ -34,4 +34,4 @@ export const Modal = ({ isOpen, onClose, children }: ModalProps) => {
       </div>
     </Dialog>
   );
-};
+}
