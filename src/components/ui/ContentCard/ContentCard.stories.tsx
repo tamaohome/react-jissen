@@ -16,10 +16,7 @@ export const Default: Story = {
   },
   render: () => (
     <div className="w-120">
-      <ContentCard>
-        <header className="mb-8">
-          <h2 className="text-xl font-bold">プロフィール</h2>
-        </header>
+      <ContentCard title="プロフィール">
         <div>
           <dl className="space-y-4">
             <div className="flex border-b border-slate-400 pb-1">

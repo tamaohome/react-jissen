@@ -1,5 +1,4 @@
 import { ContentCard } from "@/components/ui/ContentCard";
-import { PageTab } from "@/components/ui/PageTab";
 import { Pagination } from "@/components/ui/Pagination";
 import { usePagination } from "@/hooks/usePagination";
 import books from "@/data/books.json";
@@ -41,24 +40,21 @@ export function Bookshelf() {
     usePagination(books, 5);
 
   return (
-    <section>
-      <PageTab title="書籍一覧" />
-      <ContentCard>
-        <div className="mb-6 flex items-center justify-between">
-          <span className="text-sm text-slate-600">
-            全 {totalItems} 件 / {currentPage} ページ目
-          </span>
-        </div>
+    <ContentCard title="書籍一覧">
+      <div className="mb-6 flex items-center justify-between">
+        <span className="text-sm text-slate-600">
+          全 {totalItems} 件 / {currentPage} ページ目
+        </span>
+      </div>
 
-        <BookList items={currentItems} />
+      <BookList items={currentItems} />
 
-        {/* ページネーション */}
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={goToPage}
-        />
-      </ContentCard>
-    </section>
+      {/* ページネーション */}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={goToPage}
+      />
+    </ContentCard>
   );
 }

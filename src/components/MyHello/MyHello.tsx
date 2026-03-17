@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Modal } from "@/components/ui/Modal";
-import { PageTab } from "@/components/ui/PageTab";
 import { ContentCard } from "@/components/ui/ContentCard";
 import { Button } from "@/components/ui/Button";
 
@@ -35,18 +34,15 @@ export function MyHello({ name: initialName = "" }: MyHelloProps) {
 
   return (
     <>
-      <section>
-        <PageTab title="プロフィール情報" />
-        <ContentCard>
-          <div>
-            <dl className="mb-6">
-              <dt className="text-sm font-semibold text-gray-600">ユーザ名</dt>
-              <dd className="mt-1 text-2xl font-bold text-gray-900">{name}</dd>
-            </dl>
-            <Button onClick={handleEditClick}>ユーザ名を変更</Button>
-          </div>
-        </ContentCard>
-      </section>
+      <ContentCard title="プロフィール情報">
+        <div>
+          <dl className="mb-6">
+            <dt className="text-sm font-semibold text-gray-600">ユーザ名</dt>
+            <dd className="mt-1 text-2xl font-bold text-gray-900">{name}</dd>
+          </dl>
+          <Button onClick={handleEditClick}>ユーザ名を変更</Button>
+        </div>
+      </ContentCard>
 
       <Modal isOpen={isOpen} onClose={handleCancel}>
         <h3 className="mb-4 text-lg font-semibold text-gray-900">

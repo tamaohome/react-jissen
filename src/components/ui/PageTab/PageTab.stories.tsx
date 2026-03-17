@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { PageTab } from "./PageTab";
-import { ContentCard } from "@/components/ui/ContentCard";
 
 const meta = {
   title: "UI/PageTab",
@@ -23,7 +22,6 @@ export const Default: Story = {
   render: (args) => (
     <section>
       <PageTab title={args.title} />
-      <ContentCard>コンテンツのサンプルです。</ContentCard>
     </section>
   ),
 };
