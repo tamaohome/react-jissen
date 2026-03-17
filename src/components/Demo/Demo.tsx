@@ -1,11 +1,11 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import reactLogo from "@/assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
+import "./Demo.css";
 import { ContentCard } from "@/components/ui/ContentCard";
 import { Button } from "@/components/ui/Button";
 
-function App() {
+export function Demo() {
   const [count, setCount] = useState(0);
 
   return (
@@ -24,7 +24,7 @@ function App() {
           count is {count}
         </Button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Edit <code>src/Demo.tsx</code> and save to test HMR
         </p>
       </div>
       <p className="text-center text-sm">
@@ -33,5 +33,3 @@ function App() {
     </ContentCard>
   );
 }
-
-export default App;
