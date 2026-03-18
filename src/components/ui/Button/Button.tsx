@@ -36,7 +36,7 @@ export function Button({
       disabled={disabled}
       {...props}
       className={cn(
-        "inline-flex items-center justify-center px-5 py-2 shadow-md transition-all",
+        "inline-flex items-center justify-center rounded-sm px-5 py-2 shadow-md transition-all",
         !disabled && "cursor-pointer active:scale-95",
         disabled ? "bg-slate-400 text-white" : variantClasses[variant],
         className,
