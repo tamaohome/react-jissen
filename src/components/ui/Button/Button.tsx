@@ -7,17 +7,18 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const variantClasses: Record<string, string> = {
-  danger: "bg-red-500 data-hover:bg-red-600 text-white",
-  warning: "bg-yellow-500 data-hover:bg-yellow-600 text-gray-900",
-  normal: "bg-slate-500 text-white data-hover:bg-slate-600",
-  submit: "bg-slate-500 text-white data-hover:bg-slate-600",
-  cancel: "bg-slate-400 text-white data-hover:bg-slate-500",
-};
+const variantClasses = {
+  normal: clsx("bg-slate-500 text-white data-hover:bg-slate-600"),
+  info: clsx("bg-blue-600 text-white data-hover:bg-blue-700"),
+  success: clsx("bg-emerald-600 text-white data-hover:bg-emerald-700"),
+  warning: clsx("bg-yellow-500 data-hover:bg-yellow-600 text-gray-900"),
+  danger: clsx("bg-red-500 data-hover:bg-red-600 text-white"),
+  cancel: clsx("bg-slate-400 text-white data-hover:bg-slate-500"),
+} as const;
 
 type ButtonVariants = {
   // ボタンの種類を示す属性
-  variant?: "normal" | "submit" | "cancel" | "warning" | "danger";
+  variant?: keyof typeof variantClasses;
 };
 
 export type ButtonProps = React.ComponentProps<typeof HeadlessButton> &

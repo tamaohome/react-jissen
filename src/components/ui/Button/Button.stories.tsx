@@ -22,31 +22,29 @@ export const Default: Story = {
 export const OkCancel = {
   render: () => (
     <div className="flex gap-4">
-      <Button>決定</Button>
+      <Button variant="info">決定</Button>
       <Button variant="cancel">キャンセル</Button>
     </div>
   ),
 };
 
-export const Danger: Story = {
-  args: {
-    children: "ファイルを削除",
-    variant: "danger",
-  },
-};
-
-export const Warning: Story = {
-  args: {
-    children: "サービスを停止",
-    variant: "warning",
-  },
-};
-
-export const Small: Story = {
-  args: {
-    children: "小さいボタン",
-    className: "px-3 py-1.5 text-sm",
-  },
+export const ButtonGallery = {
+  render: () => (
+    <>
+      <p className="mb-4 text-sm text-slate-600">
+        <code>varient=""</code>の指定文字列一覧
+      </p>
+      <div className="flex flex-wrap gap-4">
+        <Button>(指定無し)</Button>
+        <Button variant="normal">normal</Button>
+        <Button variant="info">info</Button>
+        <Button variant="success">success</Button>
+        <Button variant="warning">warning</Button>
+        <Button variant="danger">danger</Button>
+        <Button variant="cancel">cancel</Button>
+      </div>
+    </>
+  ),
 };
 
 export const Disabled: Story = {
