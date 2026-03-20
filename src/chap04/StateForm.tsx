@@ -1,8 +1,11 @@
 import { ConsoleViewer } from "@/components/ConsoleViewer";
 import { Button } from "@/components/ui/Button";
-import { useState } from "react";
+import { useId, useState } from "react";
 
 export function StateForm() {
+  // 一意なIDを準備
+  const id = useId();
+
   // フォームとして扱う値をStateとして宣言
   const [form, setForm] = useState({ name: "山田太郎", age: 18 });
 
@@ -21,9 +24,9 @@ export function StateForm() {
       <form className="mb-4 space-y-4 border border-slate-300 bg-white p-4">
         {/* State値を個々のフォーム要素に割り当て */}
         <div>
-          <label htmlFor="name">名前：</label>
+          <label htmlFor={`${id}-name`}>名前：</label>
           <input
-            id="name"
+            id={`${id}-name`}
             name="name"
             type="text"
             onChange={handleForm}
@@ -32,9 +35,9 @@ export function StateForm() {
           />
         </div>
         <div>
-          <label htmlFor="age">年齢：</label>
+          <label htmlFor={`${id}-age`}>年齢：</label>
           <input
-            id="age"
+            id={`${id}-age`}
             name="age"
             type="number"
             onChange={handleForm}
