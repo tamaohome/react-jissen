@@ -13,7 +13,7 @@ export function FormList() {
     // 選択値を格納するための配列
     const data = [];
 
-    // <option>要素を順に捜査し、選択状態にある値を配列に追加
+    // <option>要素を順に走査し、選択状態にある値を配列に追加
     const opts = e.target.options;
     for (const opt of opts) {
       if (opt.selected) {
